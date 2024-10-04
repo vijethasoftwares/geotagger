@@ -60,8 +60,21 @@ time.sleep(3)
 print("Enabling APIs and Webhooks...")
 time.sleep(2)
 
-# Updated longitude and latitude values
+# Original longitude and latitude values
 longitude = 78.47506591682969
 latitude = 17.388058365711366
 
 print(f"Location (Longitude, Latitude): ({longitude}, {latitude})")
+
+# Step 7: Handle the "psuedo NUD last fetched location" command
+while True:
+    command = input("\nEnter command: ").strip()
+    
+    if command == "psuedo NUD last fetched location":
+        # Display the hardcoded last fetched location
+        last_fetched_longitude = 18.001
+        last_fetched_latitude = 17.3054
+        print(f"Last Fetched Location (Longitude, Latitude): ({last_fetched_longitude}, {last_fetched_latitude})")
+        break
+    else:
+        print("Invalid command. Please enter 'psuedo NUD last fetched location' to proceed.")
